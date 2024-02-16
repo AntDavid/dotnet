@@ -20,4 +20,9 @@ public class PersonController : ControllerBase{
         return pessoa;
     }
 
+    [HttpPost]
+    public Person Post(Person person){
+
+        return person;
+    }
 }
