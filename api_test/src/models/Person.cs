@@ -1,9 +1,13 @@
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Localization;
 
 namespace src.Models;
 
 public class Person
-{
+{   
+    int LastId = 0;
+
+    public int id { get; }
     public string Nome { get; set;}
     
     public int Idade {get; set;}
@@ -24,6 +28,7 @@ public class Person
 
     public Person(string Nome, int Idade, string Cpf, bool Ativado)
     {
+        this.id = LastId++;
         this.Nome = Nome;
         this.Idade = Idade;
         this.Cpf = Cpf;
